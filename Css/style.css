@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: skyblue;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+/* SUN */
+#sun {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+
+/* plane */
+#plane {
+    width: 150px;
+    position: absolute;
+    top: 120px;
+    left: -145px;
+    animation: plane-Move 10s linear 5s 1;
+}
+
+/* plane-Move */
+@keyframes plane-Move {
+    0% {
+        transform: translatex(0)
+    }
+
+    100% {
+        transform: translate(1300px, -180px);
+    }
+}
+
+
+.cloud {
+    width: 150px;
+    position: absolute;
+    left: 1200px;
+    top: 50px;
+    opacity: 0.5;
+    animation: small-Cloud-Move 70s linear infinite;
+}
+
+/* small-Cloud-Move */
+@keyframes small-Cloud-Move {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-1290px)
+    }
+
+}
+
+/* Big-Cloud */
+.big-cloud {
+    position: absolute;
+    top: 160px;
+    left: 1000px;
+    opacity: 0.8;
+    animation: Big-Cloud-Move 40s linear infinite;
+}
+
+/* Big-Cloud-Move */
+@keyframes Big-Cloud-Move {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-1290px)
+    }
+
+}
+
+/* Truck Move */
+#truck {
+    width: 350px;
+    position: absolute;
+    top: 55vh;
+    left: -20px;
+    animation: Truck 20s linear infinite;
+}
+
+/* Truck Move */
+@keyframes Truck {
+    0% {
+        transform: translateX(-200px)
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+
+}
